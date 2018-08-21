@@ -1,0 +1,2 @@
+var planetEarth;
+var user;
