@@ -45,5 +45,5 @@ function camelize(str) {
 
   //console.log(s)
 }
-
+//mm
 //[ 'list', 'style', 'image' ]
