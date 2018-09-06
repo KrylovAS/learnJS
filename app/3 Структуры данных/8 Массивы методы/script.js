@@ -37,15 +37,18 @@ camelize('-webkit-transition') == 'WebkitTransition';
 // P.S. Вам пригодятся методы строк charAt, split и toUpperCase.
 
 function camelize(str) {
-  let s = str.split('-');
+  let arrWord = str.split('-');
+  let firstWord = arrWord.shift();  
+  let uppercaseWord = arrWord.map( (el)=> el.replace(el.charAt(0), el.charAt(0).toUpperCase()));
+   let s = str.split('-');
   //let z =
   for (let i = 1; i < s.length; i++) {
     console.log(s[i].replace(charAt(0), charAt(0).toUpperCase()));
   }
-
-  //console.log(s)
+  
+  return [firstWord, ...uppercaseWord].join('');  
+  
 }
-
-console.log(camelize("-webkit-transition"));
+ console.log(camelize("-webkit-transition"));
 
 //3 //vvvv
