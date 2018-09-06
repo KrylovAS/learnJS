@@ -38,13 +38,14 @@ camelize("-webkit-transition") == 'WebkitTransition';
 
 
 function camelize(str) {
-  let s = str.split('-');
-  //let z = 
-  for(let i = 1; i < s.length; i++) {
-    console.log(s[i].replace(charAt(0), charAt(0).toUpperCase() ))
-  }
+  let arrWord = str.split('-');
+  let firstWord = arrWord.shift();  
+  let uppercaseWord = arrWord.map( (el)=> el.replace(el.charAt(0), el.charAt(0).toUpperCase()));
 
-  //console.log(s)
+
+  return [firstWord, ...uppercaseWord].join('');  
 }
 
-//[ 'list', 'style', 'image' ]
+console.log(camelize("-webkit-transition"));
+
+//3
