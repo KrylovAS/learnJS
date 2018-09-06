@@ -112,6 +112,7 @@ function multiplyNumeric(obj) {
       obj[prop] *= 2;
     }
   }
-}
+} 
 
 console.log(menu);
+console.log('\n')
