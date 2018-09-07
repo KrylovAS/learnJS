@@ -105,7 +105,7 @@ const arr1 = [5, 2, 1, 1, -10, 8];
 arr1.sort( (a, b) =>  (a < b)?  1: -1)
 console.log(arr1);
 
-//7
+//6
 // Скопировать и отсортировать массив
 // Есть массив строк arr. Создайте массив arrSorted – из тех же элементов, но отсортированный.
 // Исходный массив не должен меняться.
@@ -116,3 +116,16 @@ const arrSorted = [...arr2].sort();
 console.log( arrSorted ); // CSS, HTML, JavaScript
 console.log( arr2 ); // HTML, JavaScript, CSS (без изменений)
 
+//7
+//Используйте функцию sort для того, чтобы «перетрясти» элементы массива в случайном порядке.
+
+var arr3 = [1, 2, 3, 4, 5];
+
+arr3.sort((a, b) => {
+  let randomNumber = Math.round(Math.random());
+  if(randomNumber === 1) {
+    return 1
+  } 
+});
+
+console.log( arr3 ); // элементы в случайном порядке, например [3,5,1,2,4]
