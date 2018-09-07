@@ -129,3 +129,25 @@ arr3.sort((a, b) => {
 });
 
 console.log( arr3 ); // элементы в случайном порядке, например [3,5,1,2,4]
+
+//8
+//Сортировка объектов
+//Напишите код, который отсортирует массив объектов people по полю age.
+
+var vasya = { name: "Вася", age: 23 };
+var masha = { name: "Маша", age: 18 };
+var vovochka = { name: "Вовочка", age: 6 };
+
+var people = [ vasya , masha , vovochka ];
+function objSortAge(a) {
+  return a.sort((a, b) => {
+    return a.age > b.age? 1 : -1
+  });  
+}
+console.log(objSortAge(people))
+// теперь people: [vovochka, masha, vasya]
+console.log(people[0].age) // 6
+//Выведите список имён в массиве после сортировки.
+
+//8
+
