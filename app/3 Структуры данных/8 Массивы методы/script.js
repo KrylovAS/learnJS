@@ -40,11 +40,7 @@ function camelize(str) {
   let arrWord = str.split('-');
   let firstWord = arrWord.shift();  
   let uppercaseWord = arrWord.map( (el)=> el.replace(el.charAt(0), el.charAt(0).toUpperCase()));
-   let s = str.split('-');
-  //let z =
-  for (let i = 1; i < s.length; i++) {
-    console.log(s[i].replace(charAt(0), charAt(0).toUpperCase()));
-  }
+   let s = str.split('-');  
   
   return [firstWord, ...uppercaseWord].join('');  
   
@@ -52,3 +48,23 @@ function camelize(str) {
  console.log(camelize("-webkit-transition"));
 
 //3 //vvvv
+
+
+
+//5
+//Сортировать в обратном порядке
+
+//Как отсортировать массив чисел в обратном порядке?
+
+var arr = [5, 2, 1, 11,-10, 8];
+
+// отсортируйте?
+
+//alert( arr ); // 8, 5, 2, 1, -10
+
+arr.sort( (a, b) => {
+  if (a > b) return 1
+  if (a < b ) return -1
+})
+
+console.log(arr)
