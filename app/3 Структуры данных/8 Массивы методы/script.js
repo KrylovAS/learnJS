@@ -100,12 +100,10 @@ function filterRangeInPlace(arr, a, b) {
 //Сортировать в обратном порядке
 //Как отсортировать массив чисел в обратном порядке?
 
-var arr1 = [5, 2, 1, -10, 8];
+var arr1 = [5, 2, 1, 1, -10, 8];
 //alert( arr ); // 8, 5, 2, 1, -10
+arr1.sort( (a, b) =>  (a < b)?  1: -1)
+console.log(arr1);
 
-arr1.sort( (a, b) => {
-  if (a < b) return 1
-  if (a > b ) return -1
-})
 
-console.log(arr1)
+
