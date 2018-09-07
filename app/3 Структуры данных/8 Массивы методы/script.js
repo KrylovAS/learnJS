@@ -100,10 +100,19 @@ function filterRangeInPlace(arr, a, b) {
 //Сортировать в обратном порядке
 //Как отсортировать массив чисел в обратном порядке?
 
-var arr1 = [5, 2, 1, 1, -10, 8];
+const arr1 = [5, 2, 1, 1, -10, 8];
 //alert( arr ); // 8, 5, 2, 1, -10
 arr1.sort( (a, b) =>  (a < b)?  1: -1)
 console.log(arr1);
 
+//7
+// Скопировать и отсортировать массив
+// Есть массив строк arr. Создайте массив arrSorted – из тех же элементов, но отсортированный.
+// Исходный массив не должен меняться.
 
+const arr2 = ["HTML", "JavaScript", "CSS"];
+const arrSorted = [...arr2].sort();
+
+console.log( arrSorted ); // CSS, HTML, JavaScript
+console.log( arr2 ); // HTML, JavaScript, CSS (без изменений)
 
