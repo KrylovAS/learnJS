@@ -103,7 +103,7 @@ function filterRangeInPlace(arr, a, b) {
 const arr1 = [5, 2, 1, 1, -10, 8];
 //alert( arr ); // 8, 5, 2, 1, -10
 arr1.sort( (a, b) =>  (a < b)?  1: -1)
-console.log(arr1);
+//console.log(arr1);
 
 //6
 // Скопировать и отсортировать массив
@@ -113,8 +113,8 @@ console.log(arr1);
 const arr2 = ["HTML", "JavaScript", "CSS"];
 const arrSorted = [...arr2].sort();
 
-console.log( arrSorted ); // CSS, HTML, JavaScript
-console.log( arr2 ); // HTML, JavaScript, CSS (без изменений)
+//console.log( arrSorted ); // CSS, HTML, JavaScript
+//console.log( arr2 ); // HTML, JavaScript, CSS (без изменений)
 
 //7
 //Используйте функцию sort для того, чтобы «перетрясти» элементы массива в случайном порядке.
@@ -128,7 +128,7 @@ arr3.sort((a, b) => {
   } 
 });
 
-console.log( arr3 ); // элементы в случайном порядке, например [3,5,1,2,4]
+//console.log( arr3 ); // элементы в случайном порядке, например [3,5,1,2,4]
 
 //8
 //Сортировка объектов
@@ -144,10 +144,68 @@ function objSortAge(a) {
     return a.age > b.age? 1 : -1
   });  
 }
-console.log(objSortAge(people))
+//console.log(objSortAge(people))
 // теперь people: [vovochka, masha, vasya]
-console.log(people[0].age) // 6
+//console.log(people[0].age) // 6
 //Выведите список имён в массиве после сортировки.
 
-//8
+//9//Вывести односвязный список
+// Односвязный список – это структура данных, которая состоит из элементов, каждый из которых хранит ссылку на следующий. Последний элемент может не иметь ссылки, либо она равна null.
+// Например, объект ниже задаёт односвязный список, в next хранится ссылка на следующий элемент:
 
+var list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null
+      }
+    }
+  }
+};
+
+//Альтернативный способ создания:
+
+var list = { value: 1 };
+list.next = { value: 2 };
+list.next.next = { value: 3 };
+list.next.next.next = { value: 4 };
+// Такая структура данных интересна тем, что можно очень быстро разбить список на части, объединить списки, удалить или добавить элемент в любое место, включая начало. При использовании массива такие действия требуют обширных перенумерований.
+
+// Задачи:
+
+// Напишите функцию printList(list), которая выводит элементы списка по очереди, при помощи цикла.
+// Напишите функцию printList(list) при помощи рекурсии.
+// Напишите функцию printReverseList(list), которая выводит элементы списка в обратном порядке, при помощи рекурсии. Для списка выше она должна выводить 4,3,2,1
+// Сделайте вариант printReverseList(list), использующий не рекурсию, а цикл.
+// Как лучше – с рекурсией или без?
+printList(list)
+
+// function printList(list) {
+//   let tmp = list;
+//   while (tmp) {
+//     console.log(tmp.value );
+//     tmp = tmp.next;
+//   }
+// }
+
+
+// function printList(list) {
+//   let tmp = list;
+//   if(tmp) {
+//     console.log(tmp.value);
+//     tmp = tmp.next;
+//     printList(tmp)
+//   }
+// }
+
+function printList(list) {
+  let tmp = list;
+  
+}
+  
+  
+  
